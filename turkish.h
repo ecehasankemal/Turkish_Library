@@ -43,4 +43,6 @@ boşluk	karakter_yaz(karakter c);
 boşluk	dizgi_yaz(karakter	*dizgi);
 tamsayı	bastır(değişmez karakter *dizgi, ...);
 
+tamsayı	dizgiden_sayıya(değişmez karakter *dizgi);
+
 #endif

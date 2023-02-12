@@ -7,7 +7,7 @@ tamsayı başla(tamsayı ac, karakter *av[])
 	tamsayı		konum;
 
 	konum = 0;
-	uzunluk = unicode_uzunluk(av[1], 4);
+	uzunluk = unicode_uzunluk(av[1], dizgiden_sayıya(av[2]));
 	bastır ("[%d]\n", uzunluk);
 	dizgi = (karakter *)yer_ayır(byte_boyu(karakter) * uzunluk);
 	döngü (konum < uzunluk && av[1][konum] != '\0')
@@ -15,7 +15,7 @@ tamsayı başla(tamsayı ac, karakter *av[])
 		dizgi[konum] = av[1][konum];
 		konum++;
 	}
-	bastır("%s", dizgi);
+	bastır("%s\n", dizgi);
 	boşalt (dizgi);
 	döndür (0);
 	/*karakter	dizgi[] = "ı";
