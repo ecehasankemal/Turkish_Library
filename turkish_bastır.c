@@ -81,7 +81,7 @@ statik hizalı tamsayı
 statik hizalı tamsayı
 	format_bulucu(__liste argüman, karakter format)
 {
-	tamsayı	uzunluk;
+	kayıtlı tamsayı	uzunluk;
 
 	uzunluk = 0;
 	eğer (format == 'c')
@@ -111,8 +111,8 @@ statik hizalı tamsayı
 tamsayı
 	bastır(değişmez karakter *dizgi, ...)
 {
-	tamsayı	konum;
-	tamsayı	uzunluk;
+	kayıtlı tamsayı	konum;
+	kayıtlı tamsayı	uzunluk;
 	__liste	argüman;
 
 	konum = 0;

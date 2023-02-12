@@ -38,6 +38,7 @@ tamsayı başla(tamsayı ac, karakter *av[])
 	döndür (0);
 	/*karakter	dizgi[] = "ı";
 
-	bastır("bu stringin byte boyu = %d\n", unicode_uzunluk(dizgi, türkçe_dizgi_uzunluk(dizgi)));
+	bastır("bu stringin byte boyu = %d\n", unicode_uzunluk(dizgi,
+	 türkçe_dizgi_uzunluk(dizgi)));
 	döndür (0);*/
 }
