@@ -23,7 +23,7 @@ kısasayı
 {
 	eğer (dizgi[sayaç] < 0)
 		döndür (1);
-	return (0);
+	döndür (0);
 }
 
 kısasayı
