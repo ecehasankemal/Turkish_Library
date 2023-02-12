@@ -1,1 +1,3 @@
 # Turkish_Library
+
+Türkçe programlayarak işletim sistemi yapmayı amaçlayan ve bu süreçte türkçe komutları çalıştırmama yardımcı olacak kütüphanem...
