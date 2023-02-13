@@ -27,6 +27,7 @@
 # define __başla va_start
 # define __son va_end
 # define __argüman va_arg
+# define BOŞ NULL
 
 # define yaz write
 # define başla main
@@ -55,13 +56,14 @@ kısasayı	unicode_bulucu(karakter *dizgi, tamsayı sayaç);
 kısasayı	unicode_hesaplayıcı(karakter *dizgi, tamsayı uzunluk, tamsayı sonuç);
 kısasayı	unicode_uzunluk(karakter *dizgi, kayıtlı tamsayı uzunluk);
 
-tamsayı	türkçe_dizgi_uzunluk(karakter *dizgi);
-tamsayı	amerikan_dizgi_uzunluk(karakter *dizgi);
+tamsayı		türkçe_dizgi_uzunluk(karakter *dizgi);
+tamsayı		amerikan_dizgi_uzunluk(karakter *dizgi);
 
-boşluk	karakter_yaz(karakter *c);
-boşluk	dizgi_yaz(karakter	*dizgi);
-tamsayı	bastır(karakter *dizgi, ...);
+boşluk		karakter_yaz(karakter *c);
+boşluk		dizgi_yaz(karakter	*dizgi);
+tamsayı		bastır(karakter *dizgi, ...);
 
-tamsayı	dizgiden_sayıya(değişmez karakter *dizgi);
+tamsayı		dizgiden_sayıya(değişmez karakter *dizgi);
+karakter	*sayıdan_dizgiye(tamsayı sayı);
 
 #endif
