@@ -12,7 +12,7 @@
  ⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄⠄
  ⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄⠄ 
  ⠄⠄⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄ Oluşturuldu: 2023/02/12 by hece
- ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/12 by hece
+ ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/13 by hece
  ⣿⣿⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⣠⣴⣿⣿⣿
 \******************************************************************************/
 
@@ -56,10 +56,11 @@ kısasayı	unicode_hesaplayıcı(karakter *dizgi, tamsayı uzunluk, tamsayı son
 kısasayı	unicode_uzunluk(karakter *dizgi, kayıtlı tamsayı uzunluk);
 
 tamsayı	türkçe_dizgi_uzunluk(karakter *dizgi);
+tamsayı	amerikan_dizgi_uzunluk(karakter *dizgi);
 
-boşluk	karakter_yaz(karakter c);
+boşluk	karakter_yaz(karakter *c);
 boşluk	dizgi_yaz(karakter	*dizgi);
-tamsayı	bastır(değişmez karakter *dizgi, ...);
+tamsayı	bastır(karakter *dizgi, ...);
 
 tamsayı	dizgiden_sayıya(değişmez karakter *dizgi);
 

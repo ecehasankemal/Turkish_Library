@@ -3,7 +3,7 @@
  ⠄⠄⠄⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄  
  ⠄⠄⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿⠄ LİSANS = GPLv03 && Mechanical Turko
  ⠄⠄⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⠄ 
- ⠄⢀⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰ deneme.c
+ ⠄⢀⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰ turkish_türkçe_dizgi_uzunluk.c
  ⠄⣼⣖⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⢇⣿⣿⡷⠶⠶⢿⣿⣿⠇⢀⣤
  ⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣶⣥⣴⣿⡗ 
  ⢀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄ Yapımcı: hece
@@ -12,38 +12,33 @@
  ⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄⠄
  ⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄⠄ 
  ⠄⠄⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄ Oluşturuldu: 2023/02/12 by hece
- ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/13 by hece
+ ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/12 by hece
  ⣿⣿⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⣠⣴⣿⣿⣿
 \******************************************************************************/
 
 #include "turkish.h"
 
-tamsayı başla(tamsayı ac, karakter *av[])
+tamsayı
+	türkçe_dizgi_uzunluk(karakter *dizgi)
 {
-	karakter	*dizgi;
-	tamsayı		uzunluk;
-	tamsayı		konum;
+	kayıtlı kısasayı	sayaç;
+	kayıtlı kısasayı	sayaç2;
 
-	konum = 0;
-	uzunluk = unicode_uzunluk(av[1], dizgiden_sayıya(av[2]));
-	bastır ("[%d]\n", uzunluk);
-	dizgi = (karakter *)yer_ayır(byte_boyu(karakter) * uzunluk);
-	döngü (konum < uzunluk && av[1][konum] != '\0')
-	{
-		dizgi[konum] = av[1][konum];
-		konum++;
-	}
-	bastır("%s\n", dizgi);
-	bastır("{{%d}} = karakter uzunlugu", türkçe_dizgi_uzunluk(dizgi));
-	karakter_yaz("a");
-	karakter_yaz("\n");
-	karakter_yaz("ö");
-	karakter_yaz("\n");
-	boşalt (dizgi);
-	döndür (0);
-	/*karakter	dizgi[] = "ı";
+	sayaç = 0;
+	sayaç2 = 0;
+	döngü(dizgi[sayaç])
+		sayaç++;
+	sayaç2 = unicode_hesaplayıcı(dizgi, sayaç, sayaç2);
+	döndür (sayaç - sayaç2);
+}
 
-	bastır("bu stringin byte boyu = %d\n", unicode_uzunluk(dizgi,
-	 türkçe_dizgi_uzunluk(dizgi)));
-	döndür (0);*/
+tamsayı
+	amerikan_dizgi_uzunluk(karakter *dizgi)
+{
+	kayıtlı kısasayı	sayaç;
+
+	sayaç = 0;
+	döngü (dizgi[sayaç])
+		sayaç++;
+	döndür (sayaç);
 }
