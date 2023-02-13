@@ -3,7 +3,7 @@
  ⠄⠄⠄⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄  
  ⠄⠄⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿⠄ LİSANS = GPLv03 && Mechanical Turko
  ⠄⠄⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⠄ 
- ⠄⢀⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰ turkish_unicode_standart.c
+ ⠄⢀⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰ turkish_dizgide_dizgi.c
  ⠄⣼⣖⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⢇⣿⣿⡷⠶⠶⢿⣿⣿⠇⢀⣤
  ⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣶⣥⣴⣿⡗ 
  ⢀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄ Yapımcı: hece
@@ -11,44 +11,35 @@
  ⠘⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠹⠈⢋⣽⣿⣿⣿⣿⣵⣾⠃⠄
  ⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄⠄
  ⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄⠄ 
- ⠄⠄⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄ Oluşturuldu: 2023/02/12 by hece
- ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/12 by hece
+ ⠄⠄⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄ Oluşturuldu: 2023/02/13 by hece
+ ⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴ Güncellendi: 2023/02/13 by hece
  ⣿⣿⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⣠⣴⣿⣿⣿
 \******************************************************************************/
 
 #include "turkish.h"
 
-kısasayı
-	unicode_bulucu(karakter *dizgi, tamsayı sayaç)
+karakter
+	*dizgide_dizgi(karakter *dizgi, karakter *bul)
 {
-	eğer (dizgi[sayaç] < 0)
-		döndür (1);
-	döndür (0);
-}
+	kayıtlı tamsayı	konum;
+	kayıtlı tamsayı	durum;
 
-kısasayı
-	unicode_hesaplayıcı(karakter *dizgi, tamsayı uzunluk, tamsayı sonuç)
-{
-	kısasayı	sayaç;
-
-	sayaç = -1;
-	döngü(sayaç++, dizgi[sayaç] != '\0' && sayaç < uzunluk + sonuç)
+	konum = 0;
+	eğer (bul[0] == '\0')
+		döndür (dizgi);
+	döngü (dizgi[konum] != '\0')
 	{
-		eğer (unicode_bulucu(dizgi, sayaç))
+		durum = 0;
+		döngü (dizgi[konum + durum] == bul[durum]
+			&& dizgi[konum + durum] != '\0')
 		{
-			sonuç++;
-			sayaç++;
+			eğer (bul[durum + 1] == '\0')
+			{
+				döndür (&dizgi[konum]);
+			}
+			durum++;
 		}
+		konum++;
 	}
-	döndür (sonuç);
-}
-
-kısasayı
-	unicode_uzunluk(karakter *dizgi, kayıtlı tamsayı uzunluk)
-{
-	kayıtlı kısasayı	sonuç;
-
-	sonuç = 0;
-	sonuç = unicode_hesaplayıcı(dizgi, uzunluk, sonuç);
-	döndür (sonuç + uzunluk);
+	döndür (0);
 }

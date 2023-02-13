@@ -58,6 +58,7 @@ kısasayı	unicode_uzunluk(karakter *dizgi, kayıtlı tamsayı uzunluk);
 
 tamsayı		türkçe_dizgi_uzunluk(karakter *dizgi);
 tamsayı		amerikan_dizgi_uzunluk(karakter *dizgi);
+karakter	*dizgide_dizgi(karakter *dizgi, karakter *bul);
 
 boşluk		karakter_yaz(karakter *c);
 boşluk		dizgi_yaz(karakter	*dizgi);
